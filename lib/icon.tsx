@@ -1,4 +1,5 @@
 import React from 'react';
+import './icons/wechat.svg';
 
 interface IconProps  {
   name: string,
@@ -7,9 +8,11 @@ interface IconProps  {
 
 const Icon:React.FunctionComponent<IconProps> = (props)=>{
   return (
-    <div>
-      {props.name}
-    </div>
+    <span>
+      <svg>
+        <use xlinkHref = {`#${props.name}`}/>
+      </svg>
+    </span>
   )
 }
 
