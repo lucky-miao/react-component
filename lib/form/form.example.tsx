@@ -28,7 +28,6 @@ const FormExample: React.FunctionComponent = () => {
   const [errors, setErrors] = useState({});
   const validator = (username: string) => {
     return new Promise<string>((resolve, reject) => {
-      debugger;
       checkUserName(username, resolve, () => reject('unique'));
     });
   };
