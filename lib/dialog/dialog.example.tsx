@@ -6,10 +6,9 @@ export default function() {
   const [x, setX] = useState(false);
   const [y, setY] = useState(false);
   const openModal = () => {
-    const close = modal(
+    modal(
       <h1>
         你好
-        <Button onClick={() => close()}>close</Button>
       </h1>
     );
   };
