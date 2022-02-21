@@ -24,6 +24,7 @@ type OneError = string | Promise<string>;
 const Validator = (formValue: FormValue, rules: FormRules, callback: (errors: any) => void): void => {
   let errors: { [key: string]: OneError[] } = {};
   const addError = (key: string, error: OneError) => {
+    console.log(error,'error')
     if (errors[key] === undefined) {
       errors[key] = [];
     }
